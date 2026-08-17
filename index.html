@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!-- ================= 1. META SEO TINGKAT DEWA ================= -->
-    <title>Jasa Saluran Mampet Ciledug & Deteksi Pipa Bocor | ONE STOP CENTER</title>
-	<!-- TITAN SPEED PROTOCOL (LCP FIX) -->
-    <link rel="preload" as="image" href="assets/img/hero-plumbing.webp" fetchpriority="high">
+    <!-- ================= 1. ZERO-BLOAT PRECONNECT PROTOCOL ================= -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- ================= 2. LCP HERO IMAGE PRELOAD ================= -->
+    <link rel="preload" as="image" href="assets/img/hero-plumbing.webp" fetchpriority="high">
+
+    <!-- ================= 3. META SEO TINGKAT DEWA ================= -->
+    <title>Jasa Saluran Mampet Ciledug & Deteksi Pipa Bocor | ONE STOP CENTER</title>
     <meta name="description" content="Darurat pipa buntu? Ahli jasa saluran mampet, sedot WC & deteksi pipa bocor terdekat di Ciledug & Bintaro. Tanpa DP, mesin Rooter mutakhir, bayar setelah tuntas!">
     <meta name="keywords" content="jasa saluran mampet ciledug, deteksi pipa bocor tangerang, sedot wc bintaro, tukang ledeng panggilan, ahli perbaikan wc buntu terdekat, biaya service pipa bocor, tukang saluran air tanpa bongkar">
     <meta name="author" content="ONE STOP CENTER">
@@ -27,6 +32,91 @@
     <meta property="og:description" content="Solusi darurat saluran mampet & deteksi pipa bocor air bersih tanpa bongkar acak. Layanan profesional, tanpa DP, bergaransi untuk Ciledug & Bintaro.">
     <meta property="og:image" content="https://dongkrakusaha.com/thumbs/logodu1.jpg">
     <meta property="og:site_name" content="One Stop Center Plumbing">
+
+    <!-- ================= 4. FONT & STYLES ================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            background-color: #0a1128; 
+            background-image: radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
+                              radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.3) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.7); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 1.5rem; 
+            transition: all 0.4s ease; 
+        }
+        .glass-card:hover { 
+            border-color: rgba(245, 158, 11, 0.4); 
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px -10px rgba(245, 158, 11, 0.2);
+        }
+        .glass-nav {
+            background: rgba(10, 17, 40, 0.85);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(24px);
+        }
+        .dropdown-group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-open { transform: translateX(0) !important; }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        
+        @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
+        
+        /* Widget & Chatbot CSS */
+        .jarvis-agency-link { color: #64748b; text-decoration: none; transition: all 0.3s ease; }
+        .jarvis-agency-link:hover { color: #f59e0b; font-weight: bold; }
+        .jarvis-trap-container { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; gap: 15px; align-items: center; }
+        .jarvis-cta-wa { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transition: transform 0.3s ease; }
+        .jarvis-cta-wa:hover { transform: scale(1.1); }
+        .jarvis-cta-wa svg { fill: #fff; width: 35px; height: 35px; }
+        .jarvis-cta-ai { width: 60px; height: 60px; background: #ffffff; border: 2px solid #f59e0b; border-radius: 50%; cursor: pointer; animation: pulse-ring 2s infinite; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: transform 0.3s ease; overflow: hidden; }
+        .jarvis-cta-ai:hover { transform: scale(1.1); }
+        .jarvis-cta-ai img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
+        .jarvis-voice-btn { flex-shrink: 0; background: transparent; border: 1px solid #f59e0b; border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease; }
+        .jarvis-voice-btn svg { fill: #f59e0b; width: 22px; height: 22px; transition: 0.3s; }
+        .jarvis-voice-btn.jarvis-playing { background: #f59e0b; }
+        .jarvis-voice-btn.jarvis-playing svg { fill: #0a1128; }
+        .jarvis-chat-box { display: none; position: fixed; bottom: 100px; right: 25px; width: 320px; background: rgba(10, 17, 40, 0.96); backdrop-filter: blur(16px); border: 1px solid #f59e0b; border-radius: 16px; z-index: 9998; flex-direction: column; box-shadow: 0 12px 35px rgba(0,0,0,0.6); overflow: hidden; }
+        .jarvis-chat-header { background: #f59e0b; color: #0a1128; padding: 12px 15px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
+        .jarvis-chat-history { height: 280px; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #cbd5e1; }
+        .jarvis-chat-input-area { padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 8px; background: rgba(10, 17, 40, 0.8); }
+        .jarvis-input { flex-grow: 1; padding: 10px 14px; border-radius: 20px; border: 1px solid rgba(245, 158, 11, 0.3); background: rgba(0,0,0,0.5); color: white; font-size: 0.85rem; outline: none; }
+        .jarvis-send { background: #f59e0b; color: #0a1128; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-weight: bold; }
+        .jarvis-msg-ai { background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 8px 8px 8px 0; align-self: flex-start; max-width: 85%; border-left: 2px solid #f59e0b; }
+        .jarvis-msg-user { background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: #f59e0b; padding: 10px 12px; border-radius: 8px 8px 0 8px; align-self: flex-end; max-width: 85%; font-weight: 600; }
+        .jarvis-typing { font-style: italic; opacity: 0.6; }
+    </style>
+
+    <!-- ================= 5. TAILWIND ENGINE ================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        obsidian: '#0a1128',
+                        auraEmerald: '#f59e0b',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
 
     <!-- JSON-LD SEO, AEO, & GEO Injection -->
     <script type="application/ld+json">
@@ -108,94 +198,6 @@
       ]
     }
     </script>
-    
-    <!-- Font Premium: Plus Jakarta Sans -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: {
-                        obsidian: '#0a1128', /* Navy Blue (Kenyamanan) */
-                        auraEmerald: '#f59e0b', /* Gold/Orange (Urgensi) */
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- CSS Custom -->
-    <style>
-        body { 
-            background-color: #0a1128; 
-            background-image: radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
-                              radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.3) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
-        .glass-card { 
-            background: rgba(15, 23, 42, 0.7); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-            backdrop-filter: blur(20px); 
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 1.5rem; 
-            transition: all 0.4s ease; 
-        }
-        .glass-card:hover { 
-            border-color: rgba(245, 158, 11, 0.4); 
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px -10px rgba(245, 158, 11, 0.2);
-        }
-        .glass-nav {
-            background: rgba(10, 17, 40, 0.85);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(24px);
-        }
-        .dropdown-group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .menu-open { transform: translateX(0) !important; }
-        
-        @keyframes pulse-ring {
-            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(245, 158, 11, 0); }
-            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
-        }
-        
-        @media (max-width: 768px) { body { padding-bottom: 120px !important; } }
-        
-        /* Widget & Chatbot CSS */
-        .jarvis-agency-link { color: #64748b; text-decoration: none; transition: all 0.3s ease; }
-        .jarvis-agency-link:hover { color: #f59e0b; font-weight: bold; }
-        .jarvis-trap-container { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; gap: 15px; align-items: center; }
-        .jarvis-cta-wa { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transition: transform 0.3s ease; }
-        .jarvis-cta-wa:hover { transform: scale(1.1); }
-        .jarvis-cta-wa svg { fill: #fff; width: 35px; height: 35px; }
-        .jarvis-cta-ai { width: 60px; height: 60px; background: #ffffff; border: 2px solid #f59e0b; border-radius: 50%; cursor: pointer; animation: pulse-ring 2s infinite; display: flex; justify-content: center; align-items: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: transform 0.3s ease; overflow: hidden; }
-        .jarvis-cta-ai:hover { transform: scale(1.1); }
-        .jarvis-cta-ai img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
-        .jarvis-voice-btn { flex-shrink: 0; background: transparent; border: 1px solid #f59e0b; border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: all 0.3s ease; }
-        .jarvis-voice-btn svg { fill: #f59e0b; width: 22px; height: 22px; transition: 0.3s; }
-        .jarvis-voice-btn.jarvis-playing { background: #f59e0b; }
-        .jarvis-voice-btn.jarvis-playing svg { fill: #0a1128; }
-        .jarvis-chat-box { display: none; position: fixed; bottom: 100px; right: 25px; width: 320px; background: rgba(10, 17, 40, 0.96); backdrop-filter: blur(16px); border: 1px solid #f59e0b; border-radius: 16px; z-index: 9998; flex-direction: column; box-shadow: 0 12px 35px rgba(0,0,0,0.6); overflow: hidden; }
-        .jarvis-chat-header { background: #f59e0b; color: #0a1128; padding: 12px 15px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; }
-        .jarvis-chat-history { height: 280px; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: #cbd5e1; }
-        .jarvis-chat-input-area { padding: 10px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 8px; background: rgba(10, 17, 40, 0.8); }
-        .jarvis-input { flex-grow: 1; padding: 10px 14px; border-radius: 20px; border: 1px solid rgba(245, 158, 11, 0.3); background: rgba(0,0,0,0.5); color: white; font-size: 0.85rem; outline: none; }
-        .jarvis-send { background: #f59e0b; color: #0a1128; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; font-weight: bold; }
-        .jarvis-msg-ai { background: rgba(255,255,255,0.05); padding: 10px 12px; border-radius: 8px 8px 8px 0; align-self: flex-start; max-width: 85%; border-left: 2px solid #f59e0b; }
-        .jarvis-msg-user { background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: #f59e0b; padding: 10px 12px; border-radius: 8px 8px 0 8px; align-self: flex-end; max-width: 85%; font-weight: 600; }
-        .jarvis-typing { font-style: italic; opacity: 0.6; }
-    </style>
 </head>
 <body class="text-slate-400 font-sans antialiased min-h-screen flex flex-col selection:bg-auraEmerald selection:text-black">
 
@@ -331,9 +333,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Layanan 1 -->
                 <div class="glass-card group overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all flex flex-col">
-                    <img src="assets/img/jasa-saluran-mampet.webp" alt="Jasa Saluran Mampet Ciledug Mesin Rooter" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/jasa-saluran-mampet.webp" alt="Jasa Saluran Mampet Ciledug Mesin Rooter" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="p-8 flex-grow flex flex-col">
-                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4 text-2xl">🌪️</div>
+                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
                         <h3 class="text-white font-extrabold text-xl mb-3 group-hover:text-auraEmerald transition-colors">Saluran Air Mampet</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Perbaikan pembuangan wastafel buntu, bak kontrol, dan paralon sumbat. Menggunakan <strong>Mesin Spiral Drain Cleaner (Rooter)</strong> yang efektif menghancurkan kerak kotoran terdalam.</p>
                         <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20ingin%20pesan%20Jasa%20Pelancaran%20Saluran%20Mampet%20menggunakan%20Rooter." target="_blank" class="text-auraEmerald text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Pesan Layanan <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
@@ -342,9 +346,11 @@
 
                 <!-- Layanan 2 -->
                 <div class="glass-card group overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all flex flex-col">
-                    <img src="assets/img/deteksi-pipa-bocor.webp" alt="Deteksi Pipa Bocor Tangerang Akustik" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/deteksi-pipa-bocor.webp" alt="Deteksi Pipa Bocor Tangerang Akustik" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="p-8 flex-grow flex flex-col">
-                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4 text-2xl">💧</div>
+                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        </div>
                         <h3 class="text-white font-extrabold text-xl mb-3 group-hover:text-auraEmerald transition-colors">Deteksi Pipa Bocor</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Solusi rembesan air dan tagihan PAM jebol. Melacak kebocoran instalasi pipa air bersih dengan teknologi <strong>Acoustic Leak Detector</strong>, akurat tanpa membongkar seluruh keramik rumah.</p>
                         <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20ingin%20pesan%20Jasa%20Deteksi%20Pipa%20Bocor%20Air%20Bersih." target="_blank" class="text-auraEmerald text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Pesan Layanan <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
@@ -353,9 +359,11 @@
 
                 <!-- Layanan 3 -->
                 <div class="glass-card group overflow-hidden border border-white/5 hover:border-auraEmerald/40 transition-all flex flex-col">
-                    <img src="assets/img/jasa-tukang-renovasi.webp" alt="Jasa Sedot WC Bintaro" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/jasa-tukang-renovasi.webp" alt="Jasa Sedot WC Bintaro" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="p-8 flex-grow flex flex-col">
-                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4 text-2xl">🚽</div>
+                        <div class="w-12 h-12 rounded-lg bg-auraEmerald/10 text-auraEmerald flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 19h8m-8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-1m-4-10h4m-4 4h4m1-4h3l3 4v4h-3"></path></svg>
+                        </div>
                         <h3 class="text-white font-extrabold text-xl mb-3 group-hover:text-auraEmerald transition-colors">Sedot WC & Limbah</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">Atasi septic tank penuh dan bau tak sedap dengan armada mobil vakum kami yang berdaya hisap kuat. Bersih, tuntas, dan bergaransi penuh untuk area Bintaro dan Ciledug.</p>
                         <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20ingin%20pesan%20Jasa%20Sedot%20WC%20dan%20Limbah." target="_blank" class="text-auraEmerald text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Pesan Layanan <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
@@ -372,16 +380,16 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="glass-card overflow-hidden aspect-square border-white/5 p-1">
-                    <img src="assets/img/galeri-1.webp" alt="Pekerjaan Saluran Mampet Wastafel Ciledug" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/galeri-1.webp" alt="Pekerjaan Saluran Mampet Wastafel Ciledug" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="glass-card overflow-hidden aspect-square border-white/5 p-1">
-                    <img src="assets/img/galeri-2.webp" alt="Alat Deteksi Pipa Bocor Akustik Bintaro" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/galeri-2.webp" alt="Alat Deteksi Pipa Bocor Akustik Bintaro" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="glass-card overflow-hidden aspect-square border-white/5 p-1">
-                    <img src="assets/img/galeri-3.webp" alt="Mesin Rooter Pembersih Saluran Karang Tengah" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/galeri-3.webp" alt="Mesin Rooter Pembersih Saluran Karang Tengah" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="glass-card overflow-hidden aspect-square border-white/5 p-1">
-                    <img src="assets/img/galeri-4.webp" alt="Proses Sedot WC Pesanggrahan" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy">
+                    <img src="assets/img/galeri-4.webp" alt="Proses Sedot WC Pesanggrahan" class="w-full h-full object-cover rounded-xl hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -442,15 +450,21 @@
                     <p class="text-slate-300 text-lg mb-8 leading-relaxed">Jangan biarkan kotoran meluap atau tagihan bocor merugikan Anda. Kirimkan keluhan, dan kami akan merespons dengan <strong class="text-white">Estimasi Biaya Transparan</strong> segera.</p>
                     
                     <div class="flex items-center gap-4 text-sm font-bold text-white mb-4">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
                         Tanpa DP - Bayar Setelah Tuntas
                     </div>
                     <div class="flex items-center gap-4 text-sm font-bold text-white mb-4">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
                         Mesin Rooter & Deteksi Akustik Modern
                     </div>
                     <div class="flex items-center gap-4 text-sm font-bold text-white">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
                         Garansi Pekerjaan Penuh
                     </div>
                 </div>
@@ -693,7 +707,7 @@
         </a>
         <!-- 2. Tombol AI -->
         <div class="jarvis-cta-ai" id="jarvis-ai-button" title="Tanya AI Asisten">
-            <img src="https://dongkrakusaha.com/gambarbebas/1142920260706-035633_logo%20ai%20tanya%20ai.webp" alt="Tanya AI ONE STOP CENTER" loading="lazy">
+            <img src="https://dongkrakusaha.com/gambarbebas/1142920260706-035633_logo%20ai%20tanya%20ai.webp" alt="Tanya AI ONE STOP CENTER" loading="lazy" decoding="async">
         </div>
     </div>
     
