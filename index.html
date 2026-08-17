@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0a1128">
     
     <!-- ================= 1. ZERO-BLOAT PRECONNECT PROTOCOL ================= -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
@@ -14,7 +15,12 @@
     <!-- ================= 2. LCP HERO IMAGE PRELOAD ================= -->
     <link rel="preload" as="image" href="assets/img/hero-plumbing.webp" fetchpriority="high">
 
-    <!-- ================= 3. META SEO TINGKAT DEWA ================= -->
+    <!-- ================= 3. ASYNCHRONOUS FONT LOADING (FCP FIX) ================= -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap"></noscript>
+
+    <!-- ================= 4. META SEO TINGKAT DEWA ================= -->
     <title>Jasa Saluran Mampet Ciledug & Deteksi Pipa Bocor | ONE STOP CENTER</title>
     <meta name="description" content="Darurat pipa buntu? Ahli jasa saluran mampet, sedot WC & deteksi pipa bocor terdekat di Ciledug & Bintaro. Tanpa DP, mesin Rooter mutakhir, bayar setelah tuntas!">
     <meta name="keywords" content="jasa saluran mampet ciledug, deteksi pipa bocor tangerang, sedot wc bintaro, tukang ledeng panggilan, ahli perbaikan wc buntu terdekat, biaya service pipa bocor, tukang saluran air tanpa bongkar">
@@ -33,15 +39,14 @@
     <meta property="og:image" content="https://dongkrakusaha.com/thumbs/logodu1.jpg">
     <meta property="og:site_name" content="One Stop Center Plumbing">
 
-    <!-- ================= 4. FONT & STYLES ================= -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&display=swap" rel="stylesheet">
-    
+    <!-- CSS Custom (Inlined) -->
     <style>
         body { 
             background-color: #0a1128; 
             background-image: radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
                               radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.3) 0%, transparent 50%);
             background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
         .glass-card { 
             background: rgba(15, 23, 42, 0.7); 
@@ -99,26 +104,21 @@
         .jarvis-typing { font-style: italic; opacity: 0.6; }
     </style>
 
-    <!-- ================= 5. TAILWIND ENGINE ================= -->
+    <!-- ================= 5. TAILWIND ENGINE (RENDER BLOCKING) ================= -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    colors: {
-                        obsidian: '#0a1128',
-                        auraEmerald: '#f59e0b',
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
+                    colors: { obsidian: '#0a1128', auraEmerald: '#f59e0b' },
+                    animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
                 }
             }
         }
     </script>
 
-    <!-- JSON-LD SEO, AEO, & GEO Injection -->
+    <!-- JSON-LD SEO Injection -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -226,11 +226,11 @@
                 </div>
 
                 <div class="flex items-center gap-4 z-50">
-                    <!-- CTA WA Navbar -->
                     <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20butuh%20Panggilan%20Darurat%20untuk%20perbaikan%20saluran%20mampet/pipa%20bocor.%20Bisa%20dibantu?" target="_blank" class="hidden md:flex relative items-center gap-2 px-6 py-2.5 rounded-full font-extrabold text-xs text-obsidian bg-auraEmerald overflow-hidden group">
                         <span class="relative z-10 flex items-center gap-2">Panggilan Darurat <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
                     </a>
-                    <button id="menu-btn" class="lg:hidden p-2 text-white hover:text-auraEmerald focus:outline-none bg-white/5 rounded-lg border border-white/10">
+                    <!-- A11y Fix: aria-label added -->
+                    <button id="menu-btn" aria-label="Buka Menu Mobile" class="lg:hidden p-2 text-white hover:text-auraEmerald focus:outline-none bg-white/5 rounded-lg border border-white/10">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
@@ -245,20 +245,19 @@
                 <a href="produk/jasa-sedot-wc.html" class="hover:text-white pb-2 border-b border-white/10">Sedot WC & Limbah</a>
                 <a href="#galeri" class="hover:text-white pb-2 border-b border-white/10">Galeri Proyek</a>
             </div>
-            <!-- CTA WA Menu Mobile -->
             <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20butuh%20Panggilan%20Darurat%20untuk%20perbaikan%20saluran%20mampet/pipa%20bocor.%20Bisa%20dibantu?" target="_blank" class="mt-auto block w-full py-4 bg-auraEmerald text-obsidian text-center font-extrabold rounded-xl">Chat Teknisi Sekarang</a>
         </div>
     </nav>
 
     <main class="pt-24 pb-16 flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <!-- ================= HERO SECTION (LCP FULLY OPTIMIZED) ================= -->
+        <!-- ================= HERO SECTION ================= -->
         <section class="mt-6 mb-20 relative rounded-[2rem] border border-white/5 overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.6)]">
             
-            <img src="assets/img/hero-plumbing.webp" alt="Ahli Jasa Saluran Mampet & Pipa Bocor Ciledug Bintaro" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover z-0">
+            <!-- Hero Image: Explicit decoding="sync" for LCP optimization -->
+            <img src="assets/img/hero-plumbing.webp" alt="Ahli Jasa Saluran Mampet & Pipa Bocor Ciledug Bintaro" fetchpriority="high" decoding="sync" class="absolute inset-0 w-full h-full object-cover z-0">
             
             <div class="absolute inset-0 bg-gradient-to-b from-obsidian/70 to-obsidian/95 z-0 pointer-events-none"></div>
-            
             <div class="absolute inset-0 bg-auraEmerald/10 blur-[100px] pointer-events-none z-0"></div>
             
             <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-24 md:py-32">
@@ -372,7 +371,7 @@
             </div>
         </section>
 
-        <!-- ================= GALERI PEKERJAAN (DESIRE) ================= -->
+        <!-- ================= GALERI PEKERJAAN ================= -->
         <section id="galeri" class="mb-24">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Dokumentasi Lapangan</h2>
@@ -394,7 +393,7 @@
             </div>
         </section>
 
-        <!-- ================= TESTIMONI PELANGGAN (DESIRE) ================= -->
+        <!-- ================= TESTIMONI PELANGGAN ================= -->
         <section class="mb-24">
             <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-12 text-center">Ulasan Warga Sekitar</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -450,21 +449,15 @@
                     <p class="text-slate-300 text-lg mb-8 leading-relaxed">Jangan biarkan kotoran meluap atau tagihan bocor merugikan Anda. Kirimkan keluhan, dan kami akan merespons dengan <strong class="text-white">Estimasi Biaya Transparan</strong> segera.</p>
                     
                     <div class="flex items-center gap-4 text-sm font-bold text-white mb-4">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
                         Tanpa DP - Bayar Setelah Tuntas
                     </div>
                     <div class="flex items-center gap-4 text-sm font-bold text-white mb-4">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
                         Mesin Rooter & Deteksi Akustik Modern
                     </div>
                     <div class="flex items-center gap-4 text-sm font-bold text-white">
-                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-auraEmerald">✓</div>
                         Garansi Pekerjaan Penuh
                     </div>
                 </div>
@@ -504,7 +497,7 @@
             </div>
         </section>
 
-        <!-- ================= ARTIKEL PILAR MOTHERSHIP (SEO INJECTION TINGKAT DEWA) ================= -->
+        <!-- ================= ARTIKEL PILAR MOTHERSHIP ================= -->
         <article class="glass-card p-8 md:p-14 mb-20 border-auraEmerald/20 bg-gradient-to-br from-[#0c142e] to-transparent relative overflow-hidden">
             <div class="absolute -right-20 -top-20 w-64 h-64 bg-auraEmerald/5 blur-[80px] rounded-full"></div>
             
@@ -530,7 +523,6 @@
 
                 <p class="mt-8 pt-6 font-medium">Bebaskan rumah dari bau tak sedap dan genangan kotor. Cukup klik tombol WhatsApp, teknisi kami segera merapat untuk mengembalikan kenyamanan properti Anda. <a href="https://wa.me/6285591636942" class="text-auraEmerald font-bold underline" target="_blank">Hubungi kami sekarang!</a></p>
                 
-                <!-- VISIBLE LSI INJECTION (WHITE HAT MURNI) -->
                 <div class="mt-10 pt-6 border-t border-white/10">
                     <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-3">Pencarian Terkait (Tags):</h4>
                     <div class="flex flex-wrap gap-2 text-xs text-slate-400">
@@ -577,7 +569,7 @@
             </div>
         </section>
 
-        <!-- ================= FAQ VISUAL (5 POIN) ================= -->
+        <!-- ================= FAQ VISUAL ================= -->
         <section id="faq" class="mb-24">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12">
@@ -587,7 +579,7 @@
                 
                 <div class="space-y-4">
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start transition-colors">
-                        <button class="jarvis-voice-btn" data-text="Harga sangat terjangkau. Menariknya lagi, kami menerapkan sistem Tanpa DP. Anda baru membayar ketika masalah perbaikan sudah benar-benar tuntas.">
+                        <button class="jarvis-voice-btn" data-text="Harga sangat terjangkau. Menariknya lagi, kami menerapkan sistem Tanpa DP. Anda baru membayar ketika masalah perbaikan sudah benar-benar tuntas." aria-label="Putar Jawaban FAQ 1">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                         </button>
                         <div>
@@ -596,7 +588,7 @@
                         </div>
                     </div>
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start transition-colors">
-                        <button class="jarvis-voice-btn" data-text="Tidak perlu. Kami menggunakan Acoustic Leak Detector yang mampu menemukan pusat kebocoran secara presisi, sehingga tidak membongkar lantai secara acak.">
+                        <button class="jarvis-voice-btn" data-text="Tidak perlu. Kami menggunakan Acoustic Leak Detector yang mampu menemukan pusat kebocoran secara presisi, sehingga tidak membongkar lantai secara acak." aria-label="Putar Jawaban FAQ 2">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                         </button>
                         <div>
@@ -605,7 +597,7 @@
                         </div>
                     </div>
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start transition-colors">
-                        <button class="jarvis-voice-btn" data-text="Layanan panggilan kami aktif melayani kawasan Ciledug, Karang Tengah, Bintaro, Pesanggrahan, Kebayoran, dan area sekitarnya.">
+                        <button class="jarvis-voice-btn" data-text="Layanan panggilan kami aktif melayani kawasan Ciledug, Karang Tengah, Bintaro, Pesanggrahan, Kebayoran, dan area sekitarnya." aria-label="Putar Jawaban FAQ 3">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                         </button>
                         <div>
@@ -614,7 +606,7 @@
                         </div>
                     </div>
                     <div class="glass-card p-6 border-white/5 hover:border-auraEmerald/30 flex gap-4 items-start transition-colors">
-                        <button class="jarvis-voice-btn" data-text="Ya, tentu. Kami memberikan jaminan garansi penuh pasca perbaikan, karena keamanan dan kepuasan pelanggan adalah misi prioritas kami.">
+                        <button class="jarvis-voice-btn" data-text="Ya, tentu. Kami memberikan jaminan garansi penuh pasca perbaikan, karena keamanan dan kepuasan pelanggan adalah misi prioritas kami." aria-label="Putar Jawaban FAQ 4">
                             <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                         </button>
                         <div>
@@ -702,27 +694,27 @@
     <!-- ================= DUAL-TRAP CTA WIDGET (WA + AI) ================= -->
     <div class="jarvis-trap-container">
         <!-- 1. Tombol WA -->
-        <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20butuh%20bantuan%20teknisi%20untuk%20masalah%20saluran%20mampet/bocor.%20Bisa%20respons%20sekarang?" target="_blank" rel="noopener noreferrer" class="jarvis-cta-wa" title="Hubungi via WhatsApp">
+        <a href="https://wa.me/6285591636942?text=Halo%20ONE%20STOP%20CENTER,%20saya%20butuh%20bantuan%20teknisi%20untuk%20masalah%20saluran%20mampet/bocor.%20Bisa%20respons%20sekarang?" target="_blank" rel="noopener noreferrer" class="jarvis-cta-wa" aria-label="Chat WhatsApp Darurat" title="Hubungi via WhatsApp">
             <svg viewBox="0 0 24 24"><path d="M12.031 21.5c-1.304 0-2.57-.34-3.69-1l-.26-.16-2.74.72.73-2.67-.17-.28c-.68-1.12-1.04-2.42-1.04-3.75 0-3.9 3.17-7.07 7.07-7.07 3.9 0 7.07 3.17 7.07 7.07s-3.17 7.07-7.07 7.07zm0-16.14c-4.99 0-9.05 4.06-9.05 9.05 0 1.6.42 3.16 1.22 4.54l-1.3 4.74 4.85-1.27c1.33.73 2.82 1.12 4.38 1.12 4.99 0 9.05-4.06 9.05-9.05 0-4.99-4.06-9.05-9.05-9.05zm4.97 12.35c-.27-.81-1.61-1.36-1.61-1.36-.23-.12-.49-.07-.65.1l-.87 1.07c-.17.21-.46.26-.71.13-1.47-.78-2.64-1.95-3.41-3.42-.12-.24-.07-.53.14-.7l1.08-.88c.17-.16.22-.42.1-.65 0 0-.55-1.34-1.36-1.61-.31-.1-.65.01-.81.28l-.66 1.1c-.24.4-.3 1.03-.02 1.57.86 1.7 2.1 3.2 3.65 4.3 1.25.88 2.62 1.48 3.94 1.54.54.03 1.16-.03 1.56-.27l1.1-.67c.27-.16.38-.5.28-.8z"/></svg>
         </a>
         <!-- 2. Tombol AI -->
-        <div class="jarvis-cta-ai" id="jarvis-ai-button" title="Tanya AI Asisten">
+        <button class="jarvis-cta-ai" id="jarvis-ai-button" aria-label="Buka Chat AI Asisten" title="Tanya AI Asisten">
             <img src="https://dongkrakusaha.com/gambarbebas/1142920260706-035633_logo%20ai%20tanya%20ai.webp" alt="Tanya AI ONE STOP CENTER" loading="lazy" decoding="async">
-        </div>
+        </button>
     </div>
     
     <!-- Kotak Chatbot -->
-    <div id="jarvis-chat-box" class="jarvis-chat-box">
+    <div id="jarvis-chat-box" class="jarvis-chat-box" role="dialog" aria-label="AI Chatbot">
         <div class="jarvis-chat-header">
             <span style="display: flex; align-items: center; gap: 8px;">Asisten Konsultan AI</span>
-            <span id="jarvis-close-ai" style="cursor: pointer; font-size: 1.4rem; line-height: 1;">&times;</span>
+            <button id="jarvis-close-ai" aria-label="Tutup Chat" style="cursor: pointer; font-size: 1.4rem; line-height: 1; background: transparent; border: none;">&times;</button>
         </div>
         <div id="jarvis-chat-history" class="jarvis-chat-history">
             <div class="jarvis-msg-ai">Halo! Saya asisten virtual ONE STOP CENTER. Ada pertanyaan tentang masalah saluran mampet, pipa bocor, atau butuh teknisi darurat area Ciledug? Ketik keluhan Anda!</div>
         </div>
         <div class="jarvis-chat-input-area">
-            <input type="text" id="jarvis-chat-input" class="jarvis-input" placeholder="Ketik pesan di sini...">
-            <button id="jarvis-send-chat" class="jarvis-send">GO</button>
+            <input type="text" id="jarvis-chat-input" class="jarvis-input" aria-label="Ketik pesan Anda" placeholder="Ketik pesan di sini...">
+            <button id="jarvis-send-chat" class="jarvis-send" aria-label="Kirim Pesan">GO</button>
         </div>
     </div>
 
